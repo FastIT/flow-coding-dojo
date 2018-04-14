@@ -1,0 +1,11 @@
+{
+  "generator-react-loopback": {
+    "applicationName": "flow-coding-dojo",
+    "applicationFolder": "flow-coding-dojo",
+    "clientRequired": true,
+    "clientLanguage": "es6",
+    "typeChecker": "flow",
+    "serverRequired": true,
+    "serverPort": 3000
+  }
+}
