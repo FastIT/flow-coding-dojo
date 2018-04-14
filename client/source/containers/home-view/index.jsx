@@ -16,7 +16,7 @@ type State = {
 class HomeView extends Component<Props> {
   props: Props;
   render() {
-    const { authentication = { user: { firstName: '' }} } = this.props;
+    const { authentication = { user: { firstName: '' } } } = this.props;
     return (
       <div className="container">
         <div className="row center-xs">

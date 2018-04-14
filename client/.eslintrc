@@ -29,7 +29,7 @@
   },
   "rules": {
     "prettier/prettier": [
-      "error",
+      "warn",
       {
         "singleQuote": true,
         "trailingComma": "all",
@@ -64,5 +64,10 @@
     "flowtype/use-flow-type": 1,
     "flowtype/delimiter-dangle": [1, "always-multiline"],
     "flowtype/semi": [1, "always"]
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
   }
 }

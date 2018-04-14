@@ -21,7 +21,9 @@ class HelloCard extends Component<Props> {
         <Card>
           <CardText>
             <h1>Hello {user.firstName}</h1>
-            <h2>Your roles: {user.roles && user.roles.map(role => role.name).join(', ')}</h2>
+            <h2>
+              Your roles: {user.roles && user.roles.map(role => role.name).join(', ')}
+            </h2>
           </CardText>
         </Card>
       </div>

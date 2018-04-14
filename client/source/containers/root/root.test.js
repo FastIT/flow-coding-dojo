@@ -82,9 +82,7 @@ describe('<Root/>', () => {
   });
 
   it('should display <div></div> with no authentication', () => {
-    const wrapper = mount(
-      <Root {...props} authentication={{}} />,
-    );
+    const wrapper = mount(<Root {...props} authentication={{}} />);
     expect(wrapper.html()).toEqual('<div></div>');
   });
 

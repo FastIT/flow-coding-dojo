@@ -35,11 +35,11 @@ type Sidebar = {
 };
 type Authentication = {
   id: string,
-  user: User
-} | {};
+  user: User,
+};
 type Props = {
   languageSelected: string,
-  authentication: Authentication,
+  authentication: {} | Authentication,
   authenticationEffects: {
     login: Function,
     logout: Function,
@@ -56,7 +56,7 @@ type State = {
   language: {
     selected: string,
   },
-  authentication?: Authentication,
+  authentication?: {} | Authentication,
   'side-bar': Sidebar,
 };
 
