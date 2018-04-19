@@ -2,9 +2,10 @@
 import React, { Component } from 'react';
 
 import SwPeopleList from '../../components/sw-people-list';
+import type { People } from '../../common/people';
 
 export default class SwPeople extends Component<void> {
-  peopleList = [
+  peopleList: Array<People> = [
     { name: 'Luke Skywalker', height: 165, gender: 'male', hair_color: 'blond' },
     { name: 'Obi-Wan Kenobi', height: 172, gender: 'male', hair_color: 'auburn, white' },
     { name: 'R2-D2', height: 96, gender: 'n/a', hair_color: 'n/a' },
