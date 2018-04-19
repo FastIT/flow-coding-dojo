@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 
 type People = {
   name: string,
+  gender: string,
+  height: number,
+  hair_color: string,
 };
 type Props = {
   list: Array<People>,
