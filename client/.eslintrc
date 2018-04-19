@@ -29,7 +29,7 @@
   },
   "rules": {
     "prettier/prettier": [
-      "warn",
+      0,
       {
         "singleQuote": true,
         "trailingComma": "all",

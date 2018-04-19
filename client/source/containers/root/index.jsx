@@ -14,7 +14,8 @@ import type { Node } from 'react';
 import type { Dispatch } from 'redux';
 import HeaderBar from '../../components/header-bar';
 import SideBar from '../../components/side-bar';
-import HomeView from '../home-view';
+import SwPeople from '../sw-people';
+
 import frMessages from '../../locale/locale-fr.json';
 import enMessages from '../../locale/locale-en.json';
 
@@ -88,7 +89,7 @@ export class Root extends Component<Props> {
             onLogout={this.props.authenticationEffects.logout}
           />
           <Switch>
-            <Route path="/" component={HomeView} />
+            <Route path="/" component={SwPeople} />
             {crudRoutes.map(route => route)}
           </Switch>
         </div>
