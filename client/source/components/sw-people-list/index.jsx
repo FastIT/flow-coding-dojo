@@ -1,12 +1,8 @@
 // @flow
 import React, { Component } from 'react';
 
-type People = {
-  name: string,
-  gender: string,
-  height: number,
-  hair_color: string,
-};
+import type { People } from '../../common/people';
+
 type Props = {
   list: Array<People>,
 };
