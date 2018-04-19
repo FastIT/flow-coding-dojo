@@ -1,7 +1,14 @@
+// @flow
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
-export default class SwPeopleList extends Component {
+type People = {
+  name: string,
+};
+type Props = {
+  list: Array<People>,
+};
+
+export default class SwPeopleList extends Component<Props> {
   render() {
     return (
       <ul>
@@ -19,9 +26,3 @@ export default class SwPeopleList extends Component {
     );
   }
 }
-
-SwPeopleList.propTypes = {
-  list: PropTypes.arrayOf(
-    PropTypes.shape({ name: PropTypes.string })
-  ),
-};
