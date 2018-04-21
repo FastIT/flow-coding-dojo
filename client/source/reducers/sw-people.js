@@ -1,6 +1,13 @@
+// @flow
 import cst from '../constants/sw-people';
+import type { SwPeopleState } from '../common/store';
+import type { SetPeopleListAction } from '../actions/sw-people';
 
-export default function reducer(state = {}, action) {
+const initialState: SwPeopleState = {
+  peopleList: [],
+}
+
+export default function reducer(state: SwPeopleState = initialState, action: SetPeopleListAction) {
   switch (action.type) {
     case cst.SET_PEOPLE_LIST:
       return {
