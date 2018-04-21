@@ -1,6 +1,5 @@
 // @flow
 import cst from '../constants/sw-people';
-import type { SwPeopleState } from '../common/store';
 import type { SetPeopleListAction } from '../actions/sw-people';
 
 const initialState: SwPeopleState = {

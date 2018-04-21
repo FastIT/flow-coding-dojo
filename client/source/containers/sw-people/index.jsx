@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import SwPeopleList from '../../components/sw-people-list';
 import getSwPeopleList from '../../effects/sw-people';
 import type { People } from '../../common/people';
-import type { StoreState } from '../../common/store';
 
 type Props = {
   getSwPeopleList: Function,
