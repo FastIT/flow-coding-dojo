@@ -1,22 +1,42 @@
 // @flow
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import SwPeopleList from '../../components/sw-people-list';
+import getSwPeopleList from '../../effects/sw-people';
 import type { People } from '../../common/people';
 
-export default class SwPeople extends Component<void> {
-  peopleList: Array<People> = [
-    { name: 'Luke Skywalker', height: 165, gender: 'male', hair_color: 'blond' },
-    { name: 'Obi-Wan Kenobi', height: 172, gender: 'male', hair_color: 'auburn, white' },
-    { name: 'R2-D2', height: 96, gender: 'n/a', hair_color: 'n/a' },
-    { name: "Leia Organa", height: 150, gender: 'female', hair_color: 'brown' },
-  ];
+type Props = {
+  getSwPeopleList: Function,
+  peopleList: Array<People>,  
+};
+
+export class SwPeople extends Component<Props> {
+  static defaultProps = {
+    peopleList: [],
+  }
+  constructor(props: Props) {
+    super(props);
+    props.getSwPeopleList();
+  }
 
   render() {
     return (
       <div className="container">
-        <SwPeopleList list={this.peopleList} />
+        <SwPeopleList list={this.props.peopleList} />
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  peopleList: state['sw-people'].peopleList,
+});
+
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  getSwPeopleList: () => {
+    dispatch(getSwPeopleList());
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SwPeople);
